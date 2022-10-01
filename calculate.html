@@ -11,7 +11,7 @@
 
             function calculate(min, max, step){
             // 請用你的程式補完這個函式的區塊
-                reslut=0
+                let reslut=0
                 for (min; min<=max; min+=step){
                     reslut+=min
                 }
@@ -25,10 +25,10 @@
 
             function avg(data){
                 // 請用你的程式補完這個函式的區塊
-                var notmanager = data.employees.filter(function(item,index,arry){
+                let notmanager = data.employees.filter(function(item,index,arry){
                     return item.manager===false;
                 });
-                var totalsalary = notmanager.reduce(function(accumulator, currentValue, currenIndex,array){
+                let totalsalary = notmanager.reduce(function(accumulator, currentValue, currenIndex,array){
                     return accumulator + currentValue.salary;
                 },0);
 
@@ -36,7 +36,7 @@
 
 
             }
-            var employees=
+            let employees=
                 [
                 {
                 "name":"John",
@@ -152,9 +152,9 @@
 
             function twoSum(nums, target){
                 // your code here
-                var map = new Map();
+                let map = new Map();
                 for (let i=0; i<nums.length; i++){
-                    var v = nums[i];
+                    let v = nums[i];
                     if(map[target-v] >= 0){
                         return [map[target-v],i];
                     };map[v] = i;
